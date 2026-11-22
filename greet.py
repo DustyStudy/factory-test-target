@@ -15,3 +15,7 @@ def shout(text: str) -> str:
 
 def whisper(text: str) -> str:
     return f"{text.lower()}..."
+
+
+def title_case(text: str) -> str:
+    return " ".join(word.capitalize() for word in text.split(" "))

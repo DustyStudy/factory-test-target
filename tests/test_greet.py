@@ -1,4 +1,4 @@
-from greet import farewell, greet, shout, whisper
+from greet import farewell, greet, shout, title_case, whisper
 
 
 def test_greet():
@@ -15,3 +15,8 @@ def test_shout():
 
 def test_whisper():
     assert whisper("HI") == "hi..."
+
+
+def test_title_case():
+    assert title_case("hello big world") == "Hello Big World"
+    assert title_case("ADA lovelace") == "Ada Lovelace"
