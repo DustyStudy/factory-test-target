@@ -22,10 +22,12 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
-    # Pinned to the issue-factory commit that has the checkout-ref fix (PR #3).
-    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@1a808b4efbae9f181ba2dbef393573e7cc03b202
+    # Hash-pinned to v2.0.0 (zizmor requires a commit SHA). factory_ref names the same release.
+    # Upgrading means changing the SHA and factory_ref together.
+    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@40b1eb9b3415a10129efcbf1c8cf7858954579fd # v2.0.0
     with:
       gate_path: scripts/factory/gate.sh
+      factory_ref: v2.0.0
     secrets:
       anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
       # factory_pat: ${{ secrets.FACTORY_PAT }}   # optional: lets factory PRs trigger CI
