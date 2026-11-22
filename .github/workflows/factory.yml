@@ -22,9 +22,11 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
-    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@044dfdf9fe063f0b81eb14314f40fb4c11767b85
+    # Pin both lines to the same release tag. Upgrading means changing both.
+    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@v2.0.0
     with:
       gate_path: scripts/factory/gate.sh
+      factory_ref: v2.0.0
     secrets:
       anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
       # factory_pat: ${{ secrets.FACTORY_PAT }}   # optional: lets factory PRs trigger CI
