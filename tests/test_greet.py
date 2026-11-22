@@ -1,4 +1,4 @@
-from greet import farewell, greet
+from greet import farewell, greet, shout
 
 
 def test_greet():
@@ -7,3 +7,7 @@ def test_greet():
 
 def test_farewell():
     assert farewell("Ada") == "Goodbye, Ada!"
+
+
+def test_shout():
+    assert shout("hi") == "HI!"
