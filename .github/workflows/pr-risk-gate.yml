@@ -22,7 +22,7 @@ jobs:
       contents: read
     # REPLACE the all-zero placeholder with the full 40-character commit SHA of the release you
     # reviewed, and set the version comment to match. The gate runs its scripts and policy from this SHA.
-    uses: DustyStudy/pr-risk-gate/.github/workflows/pr-gate.yml@17567459cbed35e6bbd216e2de9cad10d393f2aa # main
+    uses: DustyStudy/pr-risk-gate/.github/workflows/pr-gate.yml@4d9678885b2cb0de94a36dcd78ccfec5621c9faf # main # main
     with:
       app_id: ${{ vars.PR_RISK_APP_ID }}
     # Passing the name satisfies the gate's required secret; the value comes from the pr-risk-gate environment.
