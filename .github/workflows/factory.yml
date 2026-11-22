@@ -22,7 +22,8 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
-    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@044dfdf9fe063f0b81eb14314f40fb4c11767b85
+    # Pinned to the issue-factory commit that has the checkout-ref fix (PR #3).
+    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@1a808b4efbae9f181ba2dbef393573e7cc03b202
     with:
       gate_path: scripts/factory/gate.sh
     secrets:
