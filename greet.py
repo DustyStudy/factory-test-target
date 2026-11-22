@@ -11,3 +11,7 @@ def farewell(name: str) -> str:
 
 def shout(text: str) -> str:
     return f"{text.upper()}!"
+
+
+def whisper(text: str) -> str:
+    return f"{text.lower()}..."
