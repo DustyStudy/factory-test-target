@@ -22,8 +22,7 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
-    # Pin to a tag or commit SHA once the factory has one.
-    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@main
+    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@044dfdf9fe063f0b81eb14314f40fb4c11767b85
     with:
       gate_path: scripts/factory/gate.sh
     secrets:
