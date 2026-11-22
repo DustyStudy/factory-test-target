@@ -22,12 +22,13 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
-    # Hash-pinned to v2.1.3 (zizmor requires a commit SHA). factory_ref names the same release.
+    # Hash-pinned to v2.2.0 (zizmor requires a commit SHA). factory_ref names the same release.
     # Upgrading means changing the SHA and factory_ref together.
-    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@dcce2eeb6ca18cbbb0c00b308a5e834661f60b8c # v2.1.3
+    uses: DustyStudy/issue-factory/.github/workflows/factory.yml@4be238445b7f5558b58c7d0043be6081cae01eed # v2.2.0
     with:
       gate_path: scripts/factory/gate.sh
-      factory_ref: v2.1.3
+      factory_ref: v2.2.0
+      auto_merge: true
     secrets:
       anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
       # Falls back to the built-in token until FACTORY_PAT exists. With it, factory PRs trigger CI.
