@@ -30,4 +30,5 @@ jobs:
       factory_ref: v2.0.0
     secrets:
       anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-      # factory_pat: ${{ secrets.FACTORY_PAT }}   # optional: lets factory PRs trigger CI
+      # Falls back to the built-in token until FACTORY_PAT exists. With it, factory PRs trigger CI.
+      factory_pat: ${{ secrets.FACTORY_PAT }}
