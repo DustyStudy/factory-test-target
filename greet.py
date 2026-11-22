@@ -15,3 +15,7 @@ def shout(text: str) -> str:
 
 def whisper(text: str) -> str:
     return f"{text.lower()}..."
+
+
+def reverse_words(text: str) -> str:
+    return " ".join(reversed(text.split()))
