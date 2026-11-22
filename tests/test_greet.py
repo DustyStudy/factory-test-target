@@ -1,4 +1,4 @@
-from greet import farewell, greet, reverse_words, shout, whisper
+from greet import farewell, greet, repeat_text, reverse_words, shout, whisper
 
 
 def test_greet():
@@ -20,3 +20,8 @@ def test_whisper():
 def test_reverse_words():
     assert reverse_words("one two three") == "three two one"
     assert reverse_words("solo") == "solo"
+
+
+def test_repeat_text():
+    assert repeat_text("ab", 3) == "ababab"
+    assert repeat_text("x", 0) == ""

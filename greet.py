@@ -19,3 +19,7 @@ def whisper(text: str) -> str:
 
 def reverse_words(text: str) -> str:
     return " ".join(reversed(text.split()))
+
+
+def repeat_text(text: str, times: int) -> str:
+    return text * times
