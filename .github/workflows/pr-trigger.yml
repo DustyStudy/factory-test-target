@@ -10,7 +10,7 @@ name: pr-trigger
 on:
   # No `branches:` filter: the gate itself refuses a PR that does not target the default branch.
   # `edited` covers a base-branch change.
-  pull_request_target:
+  pull_request_target:  # zizmor: ignore[dangerous-triggers] - no checkout, no secrets; runs the default branch copy only
     types: [opened, synchronize, reopened, edited]
   pull_request_review:
     types: [submitted, dismissed]

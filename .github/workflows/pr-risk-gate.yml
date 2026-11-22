@@ -8,7 +8,7 @@
 name: PR risk gate
 
 on:
-  workflow_run:
+  workflow_run:  # zizmor: ignore[dangerous-triggers] - reads only the pinned gate; no PR code runs here
     # The name of the trigger workflow (examples/pr-trigger.yml).
     workflows: ["pr-trigger"]
     types: [completed]
@@ -22,7 +22,7 @@ jobs:
       contents: read
     # REPLACE the all-zero placeholder with the full 40-character commit SHA of the release you
     # reviewed, and set the version comment to match. The gate runs its scripts and policy from this SHA.
-    uses: DustyStudy/pr-risk-gate/.github/workflows/pr-gate.yml@bff16dc23a32e2630507288f5e160199b434c1c2 # vX.Y.Z
+    uses: DustyStudy/pr-risk-gate/.github/workflows/pr-gate.yml@17567459cbed35e6bbd216e2de9cad10d393f2aa # main
     with:
       app_id: ${{ vars.PR_RISK_APP_ID }}
     # No `secrets:` block and never `secrets: inherit`: the gate job reads both keys from its
