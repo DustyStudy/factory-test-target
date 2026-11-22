@@ -1,0 +1,30 @@
+name: CI
+
+# Thin caller for the shared security workflows in DustyStudy/DustyStudy.
+# Pinned by commit SHA; dependabot (github-actions) keeps the pin current.
+# Job ids `scan` and `sast` are the names scripts/repo-baseline.sh expects.
+# Terraform repos: add a job calling terraform-ci.yml (see BASELINE.md).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  scan:
+    uses: DustyStudy/DustyStudy/.github/workflows/security-scan.yml@f1c0c7ba62bb21739521f09c9462dcd0548fd94e
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+
+  sast:
+    uses: DustyStudy/DustyStudy/.github/workflows/sast.yml@f1c0c7ba62bb21739521f09c9462dcd0548fd94e
+    permissions:
+      contents: read
+      security-events: write
+      actions: read

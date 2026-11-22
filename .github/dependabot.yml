@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Keeps the SHA pins in ci.yml current (security-scan and sast callers).
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      github-actions:
+        patterns: ["*"]
+    cooldown:
+      default-days: 7
