@@ -22,4 +22,6 @@ def reverse_words(text: str) -> str:
 
 
 def repeat_text(text: str, times: int) -> str:
+    if times < 0:
+        raise ValueError("times must be zero or more")
     return text * times

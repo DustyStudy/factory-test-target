@@ -1,3 +1,5 @@
+import pytest
+
 from greet import farewell, greet, repeat_text, reverse_words, shout, whisper
 
 
@@ -25,3 +27,8 @@ def test_reverse_words():
 def test_repeat_text():
     assert repeat_text("ab", 3) == "ababab"
     assert repeat_text("x", 0) == ""
+
+
+def test_repeat_text_rejects_negative_times():
+    with pytest.raises(ValueError):
+        repeat_text("ab", -1)
